@@ -14,11 +14,8 @@ function M.toggle_todo()
     vim.api.nvim_set_current_line(line)
 end
 
--- Make the toggle_todo function globally accessible
-_G.toggle_todo = M.toggle_todo
 
--- Map Ctrl+Space to the Lua function
-vim.api.nvim_set_keymap('n', '<C-Space>', '<cmd>lua toggle_todo()<CR>', { noremap = true, silent = true })
+
 
 return M
 
