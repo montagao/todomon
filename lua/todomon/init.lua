@@ -14,7 +14,7 @@ function M.toggle_todo()
         line = line:gsub("(%[)x%s?(%])", "%1 %2")
     else
         -- It's not a to-do, make it one, with one space inside the brackets
-        line = line:gsub("^([%s%*%-]+)", "%1[ ]")
+        line = line:gsub("^([%s%*%-]+)", "%1[ ] ")
     end
     vim.api.nvim_set_current_line(line)
 end
