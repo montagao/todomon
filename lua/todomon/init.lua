@@ -7,9 +7,9 @@ function M.toggle_todo()
     if line:match("^%s*[%*%-]+%s*%[%s%]") then
         line = line:gsub("%[%s%]", "[x]")
     elseif line:match("^%s*[%*%-]+%s*%[x%]") then
-        line = line:gsub("%[x%]", "[] ")
+        line = line:gsub("%[x%]", "[ ] ")
     else
-        line = line:gsub("^([%s%*%-]+)", "%1[] ")
+        line = line:gsub("^([%s%*%-]+)", "%1[ ] ")
     end
     vim.api.nvim_set_current_line(line)
 end
